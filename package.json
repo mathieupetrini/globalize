@@ -54,6 +54,8 @@
     "dist/",
     "!dist/.build",
     "doc/",
+    "src/",
+    "script/",
     "examples/",
     "!examples/**/bower_components",
     "!examples/**/.tmp-globalize-webpack",

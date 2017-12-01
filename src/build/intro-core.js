@@ -16,17 +16,17 @@
 (function( root, factory ) {
 
 	// UMD returnExports
-	if ( typeof define === "function" && define.amd ) {
+	if ( typeof exports === "object" ) {
+
+		// Node, CommonJS
+		module.exports = factory( require( "cldrjs" ) );
+	} else if ( typeof define === "function" && define.amd ) {
 
 		// AMD
 		define([
 			"cldr",
 			"cldr/event"
 		], factory );
-	} else if ( typeof exports === "object" ) {
-
-		// Node, CommonJS
-		module.exports = factory( require( "cldrjs" ) );
 	} else {
 
 		// Global
